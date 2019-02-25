@@ -1,6 +1,7 @@
 package com.example.AndroidProject;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,11 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Button_SignUp(View v){
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Intent in = new Intent(this,SignUpPage.class);
+        startActivity(in);
+    }
 
-            }
-        });
+    public void Button_SignIn(View v){
+        Intent in = new Intent(this,SignUpPage.class);
+        startActivity(in);
     }
 }
