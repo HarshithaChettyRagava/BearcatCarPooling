@@ -7,10 +7,10 @@
     tools:context=".ConfirmationPage">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/BTNCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.77"
@@ -69,10 +69,10 @@
         app:layout_constraintVertical_bias="0.147" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/BTNConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"

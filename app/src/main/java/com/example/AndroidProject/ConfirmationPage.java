@@ -11,6 +11,6 @@ public class ConfirmationPage extends AppCompatActivity {
         setContentView(R.layout.activity_confirmation_page);
     }
 
-    
+
 
 }
