@@ -5,15 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class ConfirmationPage extends AppCompatActivity {
+public class FeedbackPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmation_page);
-    }
-    public void confrimButton(View v){
-        Intent intt = new Intent(this,FeedbackPage.class);
-        startActivity(intt);
+        setContentView(R.layout.activity_feedback_page);
     }
 }

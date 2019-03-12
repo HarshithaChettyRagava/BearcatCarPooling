@@ -6,31 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".CarBooking">
 
-    <Button
-        android:id="@+id/sltCarBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Car"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.91" />
-
     <EditText
         android:id="@+id/editText8"
-        android:layout_width="wrap_content"
+        android:layout_width="233dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter Your Drop Location"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.282" />
 
     <SearchView
         android:layout_width="370dp"
@@ -44,15 +32,15 @@
 
     <TextView
         android:id="@+id/tvPickUp"
-        android:layout_width="59dp"
-        android:layout_height="29dp"
+        android:layout_width="77dp"
+        android:layout_height="31dp"
         android:text="PickUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.178" />
 
     <TextView
         android:id="@+id/tvDestination"
@@ -61,10 +49,10 @@
         android:text="Destination"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <EditText
         android:id="@+id/editText4"
@@ -75,10 +63,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintVertical_bias="0.172" />
 
     <Button
         android:id="@+id/bookBTN"
