@@ -5,17 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class SignUpPage extends AppCompatActivity {
+public class CarBooking extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up_page);
+        setContentView(R.layout.activity_car_booking);
     }
 
-    public void submitButton (View v){
-        Intent inn = new Intent(this,CarBooking.class);
+    public void BookButton(View v){
+        Intent inn = new Intent(this, ConfirmationPage.class);
         startActivity(inn);
     }
-
 }
