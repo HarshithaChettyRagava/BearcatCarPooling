@@ -7,7 +7,7 @@
     tools:context=".FeedbackPage">
 
     <TextView
-        android:id="@+id/tvRateus"
+        android:id="@+id/addressTV"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:text="Please rate your experience with us"
