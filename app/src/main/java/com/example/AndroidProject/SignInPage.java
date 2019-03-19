@@ -17,6 +17,4 @@ public class SignInPage extends AppCompatActivity {
         Intent inn = new Intent(this,CarBooking.class);
         startActivity(inn);
     }
-
-
 }
