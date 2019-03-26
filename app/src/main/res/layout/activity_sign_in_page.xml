@@ -7,7 +7,7 @@
     tools:context=".SignInPage">
 
     <TextView
-        android:id="@+id/tvUserId"
+        android:id="@+id/userIdTV"
         android:layout_width="107dp"
         android:layout_height="27dp"
         android:layout_marginTop="124dp"
