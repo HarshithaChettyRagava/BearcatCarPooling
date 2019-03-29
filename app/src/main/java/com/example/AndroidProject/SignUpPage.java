@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.sql.SQLException;
+
 public class SignUpPage extends AppCompatActivity {
     MyHelper helper;
 
@@ -42,8 +44,9 @@ public class SignUpPage extends AppCompatActivity {
         String newEntry5 = passwordET.getText().toString();
         String newEntry6 = confirmET.getText().toString();
 
-        if(newEntry1.length()==0){
-            Toast.makeText(this,"please fill the name field!",Toast.LENGTH_SHORT).show();
+        if(newEntry1.length()==0 || newEntry2.length()==0 || newEntry3.length()==0 || newEntry4.length()==0
+                || newEntry5.length()==0 || newEntry6.length()==0){
+            Toast.makeText(this,"please fill all the mandatory fields!",Toast.LENGTH_SHORT).show();
         }
         else{
             AddData(newEntry1, newEntry2, newEntry3, newEntry4, newEntry5, newEntry6);
@@ -54,18 +57,11 @@ public class SignUpPage extends AppCompatActivity {
             passwordET.setText("");
             confirmET.setText("");
         }
-
-        //long id=mSQLiteDB.insert("Tb_User",null,cv);
-//        if(id==-1){
-//            Toast.makeText(this, "Something went wrong..",Toast.LENGTH_SHORT).show();
-//        }
-//        else{
-//            Toast.makeText(SignUpPage.this,String.valueOf(id)+" record Inserted Successfully",Toast.LENGTH_LONG).show();
-//        }
     }
 
     public void AddData(String newEntry1, String newEntry2, String newEntry3, String newEntry4, String newEntry5, String newEntry6){
-        boolean insertData = helper.addData(newEntry1, newEntry2, newEntry3, newEntry4, newEntry5, newEntry6);
+        boolean insertData;
+        insertData = helper.addData(newEntry1, newEntry2, newEntry3, newEntry4, newEntry5, newEntry6);
         if(insertData){
             Toast.makeText(this, "Data Sucessfully Inserted!",Toast.LENGTH_SHORT).show();
         }

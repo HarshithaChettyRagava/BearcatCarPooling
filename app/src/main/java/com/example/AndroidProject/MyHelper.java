@@ -3,6 +3,7 @@ package com.example.AndroidProject;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -21,20 +22,26 @@ public class MyHelper extends SQLiteOpenHelper {
 
     public MyHelper(Context context)
     {
-        super(context,TABLE_NAME,null,1);
+        super(context,TABLE_NAME,null,2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db){
         //String createTable = "create table "+ TABLE_NAME +"(_id integer primary key,name,email,address,phoneNo,password,confirm_password)";
 //        String createTable = "create table "+ TABLE_NAME +"(name,email,address,phoneNo,password,confirm_password)";
-        String createTable = "create table  Customer_table(name,email,address,phoneNo,password,confirm_password)";
-        db.execSQL(createTable);
+        String createTable = "create table Customer_table(name,email,address,phoneNo,password,confirmPwd);";
+        try{
+            db.execSQL(createTable);
+        }
+        catch(SQLException e){
+            Log.d("Error message is: ",""+e);
+        }
+        Log.d("came till here","");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase SqLiteDatabase,int i,int i1){
-        SqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME );
+        SqLiteDatabase.execSQL("DROP TABLE IF EXISTS Customer_table");
         onCreate(SqLiteDatabase);
     }
 
