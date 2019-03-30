@@ -33,7 +33,7 @@ public class SignInPage extends AppCompatActivity {
         else{
             Toast.makeText(getApplicationContext(),"No of rows found"+cursor.getCount(),Toast.LENGTH_SHORT).show();
             Log.d("No of rows are"," "+cursor.getCount());
-            cursor.moveToFirst();
+            //cursor.moveToFirst();
             while(cursor.moveToNext()){
                 Toast.makeText(getApplicationContext(),"UserName is :"+cursor.getString(0),Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(),"Password is :"+cursor.getString(1),Toast.LENGTH_SHORT).show();
