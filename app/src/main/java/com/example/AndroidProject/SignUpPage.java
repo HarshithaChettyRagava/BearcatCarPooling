@@ -76,4 +76,5 @@ public class SignUpPage extends AppCompatActivity {
 //            Toast.makeText(SignUpPage.this,c.getColumnIndex("name"),Toast.LENGTH_LONG).show();
 //        }
 //    }
+    //validation for mandatory fields added.
 }
