@@ -1,25 +1,32 @@
 package com.example.AndroidProject;
 
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+
+import com.parse.Parse;
+import com.parse.ParseInstallation;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        Parse.initialize(new Parse.Configuration.Builder(this)
+//                .applicationId(getString(R.string.back4app_app_id))
+//                // if defined
+//                .clientKey(getString(R.string.back4app_client_key))
+//                .server(getString(R.string.back4app_server_url))
+//                .build()
+//        );
+//
+//        // Save the current Installation to Back4App
+//        ParseInstallation.getCurrentInstallation().saveInBackground();
     }
 
 
