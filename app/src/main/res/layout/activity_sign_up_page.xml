@@ -86,13 +86,13 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="16dp"
         android:text="Full Name"
         app:layout_constraintBottom_toTopOf="@+id/emailIdTV"
         app:layout_constraintEnd_toStartOf="@+id/userIdAsterickTV"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -100,16 +100,12 @@
         android:id="@+id/userIdAsterickTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="8dp"
         android:text="\u002A"
         android:textColor="#ff0000"
-        app:layout_constraintBottom_toTopOf="@+id/emailIdTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+        tools:layout_editor_absoluteY="30dp" />
 
     <TextView
         android:id="@+id/emailIdTV"
@@ -208,16 +204,16 @@
 
     <EditText
         android:id="@+id/passwordET"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintVertical_bias="0.637" />
 
     <Button
         android:id="@+id/submitBTN"
@@ -263,17 +259,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/emailIdET"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toEndOf="@+id/userIdAsterickTV"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.343" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
