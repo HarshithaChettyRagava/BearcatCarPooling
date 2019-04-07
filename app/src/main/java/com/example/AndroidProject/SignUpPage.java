@@ -140,7 +140,7 @@ public class SignUpPage extends AppCompatActivity {
                     }
                 }, 10000);
 
-                Intent innt = new Intent(this, CarBooking.class);
+                Intent innt = new Intent(this, MapsActivity.class);
                 startActivity(innt);
 
             }else{

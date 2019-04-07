@@ -88,7 +88,7 @@ public class SignInPage extends AppCompatActivity {
 //            }
 //        }, 10000);
 
-        Intent inn = new Intent(this,CarBooking.class);
+        Intent inn = new Intent(this,MapsActivity.class);
         startActivity(inn);
     }
 }
