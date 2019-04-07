@@ -1,23 +1,18 @@
 package com.example.AndroidProject;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.parse.Parse;
-import com.parse.ParseException;
-import com.parse.ParseInstallation;
-import com.parse.ParseObject;
-import com.parse.ParseUser;
-import com.parse.SaveCallback;
-import com.parse.SignUpCallback;
-
 public class SignUpPage extends AppCompatActivity {
-    //MyHelper helper;
+    MyHelper helper;
 
     public EditText nameET;
     public EditText emailIdET;
@@ -26,25 +21,14 @@ public class SignUpPage extends AppCompatActivity {
     public EditText passwordET;
     public EditText confirmET;
 
-//    private SQLiteDatabase mSQLiteDB;
+    private SQLiteDatabase mSQLiteDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
 
-        Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId(getString(R.string.back4app_app_id))
-                // if defined
-                .clientKey(getString(R.string.back4app_client_key))
-                .server(getString(R.string.back4app_server_url))
-                .build()
-        );
-
-        // Save the current Installation to Back4App
-        ParseInstallation.getCurrentInstallation().saveInBackground();
-
-        nameET = findViewById(R.id.nameET);
+        nameET = findViewById(R.id.fullNameET);
         emailIdET = findViewById(R.id.emailIdET);
         addressET = findViewById(R.id.addressET);
         phoneNoET = findViewById(R.id.phoneNoET);
@@ -76,37 +60,26 @@ public class SignUpPage extends AppCompatActivity {
     }
 
     public void submitButton(View v) {
-        String newEntry1 = nameET.getText().toString();
+        final String newEntry1 = nameET.getText().toString();
         String newEntry2 = emailIdET.getText().toString();
         String newEntry3 = addressET.getText().toString();
         String newEntry4 = phoneNoET.getText().toString();
-        String newEntry5 = passwordET.getText().toString();
-        String newEntry6 = confirmET.getText().toString();
+        final String newEntry5 = passwordET.getText().toString();
+        final String newEntry6 = confirmET.getText().toString();
 
         if (newEntry1.length() == 0 || newEntry2.length() == 0 || newEntry3.length() == 0 || newEntry4.length() == 0
                 || newEntry5.length() == 0 || newEntry6.length() == 0) {
             Toast.makeText(this, "please fill all the mandatory fields!", Toast.LENGTH_SHORT).show();
         } else {
-            ParseUser user = new ParseUser();
-            user.put("Name", newEntry1);
-            user.setUsername(newEntry2);
-            user.setEmail(newEntry2);
-            user.put("Address", newEntry3);
-            user.put("Phone", newEntry4);
-            user.setPassword(newEntry5);
-            user.put("ConfirmPwd", newEntry6);
-            user.signUpInBackground(new SignUpCallback() {
-                @Override
-                public void done(ParseException e) {
-                    Log.d("Parse", "Registration: " + e);
-                }
-            });
             nameET.setText("");
             emailIdET.setText("");
             addressET.setText("");
             phoneNoET.setText("");
             passwordET.setText("");
             confirmET.setText("");
+
+            Intent innt = new Intent(this, CarBooking.class);
+            startActivity(innt);
         }
     }
 }

@@ -1,12 +1,19 @@
 package com.example.AndroidProject;
 
-import android.database.Cursor;
+import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+
+import java.util.List;
 
 public class SignInPage extends AppCompatActivity {
 
@@ -19,8 +26,9 @@ public class SignInPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_page);
-        EmailId = findViewById(R.id.passwordET);
-        UserPwd = findViewById(R.id.nameET);
+        EmailId = (EditText) findViewById(R.id.emailIdET);
+        UserPwd = (EditText) findViewById(R.id.passwordET);
+
     }
 
 
@@ -45,7 +53,7 @@ public class SignInPage extends AppCompatActivity {
                 Password = cursor.getString(1);
             }
         }
-//        Intent inn = new Intent(this,CarBooking.class);
-//        startActivity(inn);
+        Intent inn = new Intent(this,CarBooking.class);
+        startActivity(inn);
     }
 }
