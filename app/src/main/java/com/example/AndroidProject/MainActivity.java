@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void Button_Feedback (View v){
+        Intent fb = new Intent(this, FeedbackPage.class);
+        startActivity(fb);
+    }
+
+
 
     public void Button_SignIn(View v){
         Intent sn = new Intent(this,SignInPage.class);
