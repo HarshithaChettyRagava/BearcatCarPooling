@@ -19,3 +19,4 @@ BEARCAT CAR POOLING
 - Validated Password with password and confirm password fields being same necessarily while registering.
 - Added condition where passwords must be a strong one.
 - Validated user must fill the all the mandatory fields.
+  
