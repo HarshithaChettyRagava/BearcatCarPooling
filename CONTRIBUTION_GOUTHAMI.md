@@ -7,12 +7,11 @@ BEARCAT CAR POOLING
 - Vamshi Krishna Nuka
 
 # My Contributions towards project
-- Signup page
-- signin page 
-- Feedback Page
+- Signup page Layouts
+- signin page Layouts
+- Feedback Page Layout and the Java File
 - Database for Feedback Page
-- UI Design
-- Booking Page
-- Confirmation Page
 - Issues with my local datbase on my pc
-- Validation on mandatory fields using asterick
+- Created 2 Alert Boxes for Feedback
+- CReated Extra Feedback for Improvement
+- Used GridLayout for extra Feedback form
