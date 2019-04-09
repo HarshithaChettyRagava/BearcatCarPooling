@@ -7,9 +7,9 @@ BEARCAT CAR POOLING
 - Vamshi Krishna Nuka
 
 # My Contributions towards project
-- Signup page Layouts
-- signin page Layouts
-- Feedback Page Layout and the Java File
+- Signup page Layouts and Basic Java File
+- signin page Layouts and Basic Java File
+- Feedback Page Layout and the Java File complete
 - Database for Feedback Page
 - Issues with my local datbase on my pc
 - Created 2 Alert Boxes for Feedback
