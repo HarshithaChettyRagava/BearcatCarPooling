@@ -115,14 +115,14 @@ public class SignUpPage extends AppCompatActivity {
                         if (e == null) {
                             if (newEntry5.equals(newEntry6)) {
                                 Toast.makeText(getApplicationContext(), "Thank You " + newEntry1 + " for registering with us!", Toast.LENGTH_LONG).show();
-                                thread.start();
+                                //thread.start();
                             } else {
                                 Toast.makeText(getApplicationContext(), "Your passwords doesn't match!", Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
                             Toast.makeText(getApplicationContext(), "Error: " + e, Toast.LENGTH_LONG).show();
-                            thread.start();
+                            //thread.start();
                         }
                     }
                 });
