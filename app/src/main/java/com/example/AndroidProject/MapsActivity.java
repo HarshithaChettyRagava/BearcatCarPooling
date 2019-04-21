@@ -199,22 +199,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         try {
             if (mLocationPermissionGranted) {
                 final Task location = mFusedLocationProviderClient.getLastLocation();
-//                                        .addOnSuccessListener(new OnSuccessListener<Location>() {
-//                                            @Override
-//                                            public void onSuccess(Location location) {
-//                                                // GPS location can be null if GPS is switched off
-//                                                if (location != null) {
-//                                                    onLocationChanged(location);
-//                                                }
-//                                            }
-//                                        })
-//                                        .addOnFailureListener(new OnFailureListener() {
-//                                            @Override
-//                                            public void onFailure(@NonNull Exception e) {
-//                                                Log.d("Map", "Error trying to get last gps location");
-//                                                e.printStackTrace();
-//                                            }
-//                                        });
                 Log.d("Map", "getDeviceLocation: location is " + location);
                 Log.d("Map", "getDeviceLocation: Task is " + location);
                 location.addOnCompleteListener(new OnCompleteListener() {
@@ -236,7 +220,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                         } else {
                             Log.d("Map", "onComplete: found location is null!");
-                            //Toast.makeText(getApplicationContext(), "unable to get current location", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "unable to get current location", Toast.LENGTH_SHORT).show();
                             // Add a marker in Sydney and move the camera
 //                            LatLng missouri = new LatLng(40.365095, -94.907837);
 //                            LatLng nwmsu = new LatLng(40.351680, -94.880465);
