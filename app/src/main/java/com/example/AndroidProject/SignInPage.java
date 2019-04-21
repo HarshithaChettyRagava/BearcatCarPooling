@@ -77,6 +77,15 @@ public class SignInPage extends AppCompatActivity {
                     Log.d("Parse","Successfully logged in");
                     EmailId.setText("");
                     UserPwd.setText("");
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            SignInPage.this.finish();
+                        }
+                    }, 10000);
+
+                    Intent inn = new Intent(getApplicationContext(),MapsActivity.class);
+                    startActivity(inn);
                 }
             }
         });
@@ -88,7 +97,6 @@ public class SignInPage extends AppCompatActivity {
 //            }
 //        }, 10000);
 
-        Intent inn = new Intent(this,MapsActivity.class);
-        startActivity(inn);
+
     }
 }
