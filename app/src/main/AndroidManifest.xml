@@ -20,7 +20,8 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PaymentPage"></activity>
+        <activity android:name=".HelpPage"></activity>
+        <activity android:name=".PaymentPage" />
         <activity android:name=".HelpImproveActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

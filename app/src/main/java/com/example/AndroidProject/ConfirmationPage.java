@@ -11,6 +11,8 @@ public class ConfirmationPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation_page);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.icon);
     }
     public void confrimButton(View v){
         Intent intt = new Intent(this,FeedbackPage.class);

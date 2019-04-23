@@ -29,6 +29,9 @@ public class SignInPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_page);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.icon);
+
         EmailId = (EditText) findViewById(R.id.emailIdET);
         UserPwd = (EditText) findViewById(R.id.passwordET);
 

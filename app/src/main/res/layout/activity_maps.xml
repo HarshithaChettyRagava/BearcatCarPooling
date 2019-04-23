@@ -4,6 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:elevation="10dp"
+    android:layout_alignParentTop="true"
+    android:background="#fff"
+    android:id="@+id/relLayout1">
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/ic_magnify0"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_magnify"/>
+
+    <EditText
+        android:id="@+id/input_search0"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:layout_toRightOf="@id/ic_magnify0"
+        android:hint="Enter your destination"
+        android:imeOptions="actionSearch"
+        android:textStyle="bold"
+        android:textSize="15sp" />
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/relLayout1"
+    android:layout_marginTop="15dp">
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -11,10 +50,13 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         tools:context=".MapsActivity" />
+</RelativeLayout>
+
 
     <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
+        <!--android:layout_width="300dp"-->
         <!--android:layout_height="50dp"-->
         <!--android:layout_marginTop="10dp"-->
         <!--android:layout_marginRight="10dp"-->
@@ -26,23 +68,55 @@
         <!--<ImageView-->
             <!--android:layout_width="15dp"-->
             <!--android:layout_height="15dp"-->
+            <!--android:id="@+id/ic_magnify0"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:src="@drawable/ic_magnify"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/input_search0"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_toRightOf="@id/ic_magnify0"-->
+            <!--android:background="@null"-->
+            <!--android:hint="Current location"-->
+            <!--android:imeOptions="actionSearch"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="15sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@id/relLayout1"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:elevation="10dp"-->
+        <!--android:background="#fff"-->
+        <!--android:id="@+id/relLayout2">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="15dp"-->
+            <!--android:layout_height="15dp"-->
             <!--android:id="@+id/ic_magnify"-->
             <!--android:layout_centerVertical="true"-->
             <!--android:layout_marginLeft="10dp"-->
             <!--android:src="@drawable/ic_magnify"/>-->
-        <!---->
+
         <!--<EditText-->
+            <!--android:id="@+id/input_search"-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="8dp"-->
             <!--android:layout_toRightOf="@+id/ic_magnify"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:textSize="15sp"-->
-            <!--android:textColor="#000"-->
-            <!--android:id="@+id/input_search"-->
             <!--android:background="@null"-->
             <!--android:hint="Enter destination"-->
-            <!--android:layout_marginLeft="5dp"-->
-            <!--android:imeOptions="actionSearch"/>-->
+            <!--android:imeOptions="actionSearch"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="15sp" />-->
 
     <!--</RelativeLayout>-->
 
@@ -56,5 +130,16 @@
         <!--android:scaleType="centerCrop"-->
         <!--android:id="@+id/ic_gps"-->
         <!--android:src="@drawable/ic_gps"/>-->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/forward"
+        android:src="@drawable/ic_forward"
+        />
 </RelativeLayout>
 

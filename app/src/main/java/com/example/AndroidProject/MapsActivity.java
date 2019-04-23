@@ -21,9 +21,12 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +51,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.parse.LogOutCallback;
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseInstallation;
+import com.parse.ParseUser;
 
 import java.io.IOError;
 import java.io.IOException;
@@ -56,6 +64,7 @@ import java.util.List;
 import java.util.Locale;
 
 import static android.icu.text.UnicodeSet.CASE;
+import static android.icu.text.UnicodeSet.EMPTY;
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -79,6 +88,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     //widgets
     private EditText mSearchText;
     private ImageView mGps;
+    private ImageButton forward;
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
 
@@ -87,8 +97,22 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        //mSearchText = findViewById(R.id.input_search);
+        mSearchText = findViewById(R.id.input_search0);
         //mGps = findViewById(R.id.ic_gps);
+        forward = findViewById(R.id.forward);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.icon);
+
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                        .applicationId(getString(R.string.back4app_app_id))
+                        // if defined
+                        .clientKey(getString(R.string.back4app_client_key))
+                        .server(getString(R.string.back4app_server_url))
+                        .build()
+        );
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
         mFusedLocationProviderClient = getFusedLocationProviderClient(this);
         getLocationPermission();
 //        startLocationUpdates();
@@ -101,6 +125,61 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
 //                .findFragmentById(R.id.map);
 //        mapFragment.getMapAsync(this);
+        if ((mSearchText.getText().toString() != null || mSearchText.getText().toString().length() != 0)) {
+            forward.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent innt = new Intent(getApplicationContext(), PaymentPage.class);
+                    startActivity(innt);
+                }
+            });
+        } else {
+            Toast.makeText(this, "Please enter destination location", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        switch(id){
+            case R.id.action_Help:
+                handleHelp();
+                return true;
+            case R.id.action_Logout:
+                handleLogout();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void handleHelp(){
+        Intent in = new Intent();
+        Log.d("Menu","Help button pressed");
+        Intent intt = new Intent(getApplicationContext(),HelpPage.class);
+        startActivity(intt);
+    }
+
+    public void handleLogout(){
+        Intent in = new Intent();
+        ParseUser.logOutInBackground(new LogOutCallback() {
+            @Override
+            public void done(ParseException e) {
+                Toast.makeText(getApplicationContext(),"Logged out Successfully",Toast.LENGTH_SHORT).show();
+                Intent inntt = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(inntt);
+            }
+        });
+        Log.d("Menu","Logout button pressed");
     }
 
     private void init(){
@@ -144,7 +223,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Address address = list.get(0);
             Log.d("Map","Geolocate: Found a location: "+address.toString());
             Toast.makeText(this,address.toString(),Toast.LENGTH_SHORT).show();
-            //moveCamera(new LatLng(address.getLatitude(),address.getLongitude()),15f, address.getAddressLine(0));
+            moveCamera(new LatLng(address.getLatitude(),address.getLongitude()),15f, address.getAddressLine(0));
         }
     }
 
@@ -212,7 +291,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 latitude = currentLocation.getLatitude();
                                 longitude = currentLocation.getLongitude();
                                 LatLng latlong = new LatLng(latitude,longitude);
-                                moveCamera(new LatLng(latitude, longitude), 15f, "My location");
+                                moveCamera(new LatLng(latitude, longitude), 15f, "My Current Location");
                             } else {
                                 Toast.makeText(getApplicationContext(), "Location is null", Toast.LENGTH_SHORT).show();
                                 Log.d("Map", "getDeviceLocation: Location is null");
@@ -291,15 +370,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
             mMap.setMyLocationEnabled(true);
             //mMap.getUiSettings().setMyLocationButtonEnabled(false);
-//            init();
+            init();
         }
-
-
 //        // Add a marker in Sydney and move the camera
 //        LatLng missouri = new LatLng(40.365095, -94.907837);
 //        mMap.addMarker(new MarkerOptions().position(missouri).title("Marker in Missouri"));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(missouri));
     }
+
 
 
 
