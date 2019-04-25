@@ -20,7 +20,8 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelpPage"></activity>
+        <activity android:name=".Reached"></activity>
+        <activity android:name=".HelpPage" />
         <activity android:name=".PaymentPage" />
         <activity android:name=".HelpImproveActivity" />
         <!--

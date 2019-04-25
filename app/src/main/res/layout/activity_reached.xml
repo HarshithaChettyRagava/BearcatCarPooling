@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    android:background="#AADFF0"
+    android:rowCount="10" >
+
+    <EditText
+        android:id="@+id/DT_T_P2"
+        android:layout_width="261dp"
+        android:layout_height="70dp"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:gravity="bottom"
+        android:text="Travel price:"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/DT_T_R2"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:gravity="bottom"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/TV_Seats"
+        android:layout_width="392dp"
+        android:layout_height="80dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:gravity="bottom"
+        android:text="You have reached the destination:"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textFontWeight="800"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/TV_S_R"
+        android:layout_width="146dp"
+        android:layout_height="70dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:background="@drawable/margine_border"
+        android:gravity="bottom"
+        android:onClick="BTN_Mini"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/DT_T_R"
+        android:layout_width="261dp"
+        android:layout_height="70dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:gravity="bottom"
+        android:text="Distance Traveled:"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/DT_T_R1"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:gravity="bottom"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/DT_T_T"
+        android:layout_width="261dp"
+        android:layout_height="70dp"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:gravity="bottom"
+        android:text="Tax:"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/DT_T1"
+        android:layout_width="122dp"
+        android:layout_height="70dp"
+        android:layout_row="6"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:gravity="bottom"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/TOT"
+        android:layout_width="122dp"
+        android:layout_height="70dp"
+        android:layout_row="7"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:gravity="bottom"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/TOT1"
+        android:layout_width="261dp"
+        android:layout_height="70dp"
+        android:layout_row="7"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:gravity="bottom"
+        android:text="Total:"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textFontWeight="80"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/Pay_Cash"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_row="9"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:background="#FFFF66"
+        android:onClick="Pay_Cash"
+        android:text="PAY CASH"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textFontWeight="20"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Card"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_row="9"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:background="#FFFF66"
+        android:onClick="Pay_Card"
+        android:text="CARD"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textFontWeight="20"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+</GridLayout>

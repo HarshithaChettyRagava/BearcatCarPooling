@@ -52,4 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Intent sn = new Intent(this,SignInPage.class);
         startActivity(sn);
     }
+
+
+
 }
