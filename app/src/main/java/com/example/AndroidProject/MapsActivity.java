@@ -383,7 +383,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 //    @Override
 //    public void onLocationChanged(Location location) {
-//        //Hey, a non null location! Sweet!
+//        //Hey, a non null loction! Sweet!
 //
 //        //remove location callback:
 //        locationManager.removeUpdates((android.location.LocationListener) this);
@@ -391,7 +391,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        //open the map:
 //        latitude = location.getLatitude();
 //        longitude = location.getLongitude();
-//        Toast.makeText(this, "latitude:" + latitude + " longitude:" + longitude, Toast.LENGTH_SHORT).show();
+//        Toast.makeTex(this, "latitude:" + latitude + " longitude:" + longitude, Toast.LENGTH_SHORT).show();
 //        //searchNearestPlace(voice2text);
 //    }
 
