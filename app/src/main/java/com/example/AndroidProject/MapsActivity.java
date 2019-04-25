@@ -92,6 +92,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
 
+    private String latitude1;
+    private String longitude1;
+    Bundle bundle;
+    Intent innt;
+    private float latitude2;
+    private float longitude2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,7 +136,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             forward.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent innt = new Intent(getApplicationContext(), ConfirmationPage.class);
                     startActivity(innt);
                 }
             });
@@ -224,6 +230,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Log.d("Map","Geolocate: Found a location: "+address.toString());
             Toast.makeText(this,address.toString(),Toast.LENGTH_SHORT).show();
             moveCamera(new LatLng(address.getLatitude(),address.getLongitude()),15f, address.getAddressLine(0));
+            LatLng latlong2 = new LatLng(address.getLatitude(),address.getLongitude());
+            //innt = new Intent(getApplicationContext(), ConfirmationPage.class);
+            innt.putExtra("LatLng2",latlong2);
         }
     }
 
@@ -291,6 +300,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 latitude = currentLocation.getLatitude();
                                 longitude = currentLocation.getLongitude();
                                 LatLng latlong = new LatLng(latitude,longitude);
+                                innt = new Intent(getApplicationContext(), ConfirmationPage.class);
+                                innt.putExtra("LatLng1",latlong);
+                                Log.d("LatLong1","Latitude and longitude are :"+latlong.latitude+" "+latlong.longitude);
+//                                bundle = new Bundle();
+//                                latitude1 = String.valueOf(latitude);
+//                                longitude1 = String.valueOf(longitude);
+//                                Log.d("latitude", "LAtitude is: "+latitude1);
+//                                Log.d("latitude", "Longitude is: "+longitude1);
+//                                bundle.putString("latitude1",latitude1);
+//                                bundle.putString("latitude2",longitude1);
                                 moveCamera(new LatLng(latitude, longitude), 15f, "My Current Location");
                             } else {
                                 Toast.makeText(getApplicationContext(), "Location is null", Toast.LENGTH_SHORT).show();
