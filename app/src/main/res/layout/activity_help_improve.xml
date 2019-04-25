@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="3"
+    android:background="#AADFF0"
     android:rowCount="15" >
 
     <TextView
@@ -184,25 +185,28 @@
         android:inputType="textMultiLine" />
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/Pay_Cash"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_row="12"
+        android:textSize="20dp"
         android:layout_column="0"
         android:layout_gravity="center"
         android:onClick="submit"
+        android:background="#FFFF66"
         android:text="SUBMIT"
         android:textAlignment="center"
         android:textColor="#000000" />
 
     <Button
-        android:id="@+id/cancel"
+        android:id="@+id/Card"
         android:layout_width="201dp"
         android:layout_height="wrap_content"
         android:layout_row="12"
+        android:textSize="20dp"
         android:layout_column="1"
         android:layout_gravity="center"
-
+        android:background="#FFFF66"
         android:onClick="cancel"
         android:text="CANCEL"
         android:textAlignment="center"

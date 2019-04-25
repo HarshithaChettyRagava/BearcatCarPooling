@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#AADFF0"
     android:layout_height="match_parent">
 
 
@@ -18,26 +19,30 @@
         app:layout_constraintVertical_bias="0.253" />
 
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/Pay_Cash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="submit"
         android:text="SUBMIT"
-        android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="#FFFF66"
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-        app:layout_constraintVertical_bias="0.634" />
+        app:layout_constraintVertical_bias="0.634"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="279dp"
         android:layout_height="34dp"
         android:text="How do you Rate our Service?"
-        android:textSize="18sp"
+
         android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,7 +53,8 @@
         android:id="@+id/editText2"
         android:layout_width="291dp"
         android:layout_height="142dp"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
+        android:textSize="20dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:maxLines="5"
@@ -65,6 +71,7 @@
         android:id="@+id/textView4"
         android:layout_width="134dp"
         android:layout_height="26dp"
+        android:textSize="20dp"
         android:text="Comments:"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

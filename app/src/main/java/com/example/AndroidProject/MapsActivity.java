@@ -129,7 +129,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             forward.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent innt = new Intent(getApplicationContext(), PaymentPage.class);
+                    Intent innt = new Intent(getApplicationContext(), ConfirmationPage.class);
                     startActivity(innt);
                 }
             });

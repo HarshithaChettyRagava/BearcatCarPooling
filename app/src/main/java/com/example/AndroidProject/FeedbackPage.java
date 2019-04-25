@@ -39,7 +39,7 @@ public class FeedbackPage extends AppCompatActivity {
 
         rate = (RatingBar) findViewById(R.id.ratingBar);
         tv1=(TextView) findViewById(R.id.editText2);
-        Submit = (Button) findViewById(R.id.submit);
+        Submit = (Button) findViewById(R.id.Pay_Cash);
 
 
     }
