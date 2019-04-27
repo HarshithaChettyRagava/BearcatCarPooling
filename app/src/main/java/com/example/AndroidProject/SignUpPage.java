@@ -117,7 +117,7 @@ public class SignUpPage extends AppCompatActivity {
                         Log.d("Parse", "Registration: " + e);
                         if (e == null) {
                             if (newEntry5.equals(newEntry6)) {
-                                Toast.makeText(getApplicationContext(), "Thank You " + newEntry1 + " for registering with us!", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(), "Thank You " + newEntry1 + " for registering with us!", Toast.LENGTH_LONG).show();
                                 //thread.start();
                             } else {
                                 Toast.makeText(getApplicationContext(), "Your passwords doesn't match!", Toast.LENGTH_SHORT).show();
