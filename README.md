@@ -1,17 +1,18 @@
 # Team Project
 Bearcat Car Pooling
 
-## Team members
+# Team members
 - Harshitha Chetty Ragava
 - Gouthami Pasham
 - Vamshi krishna Nuka
 
-## GitHub repo URL:
+# GitHub repo URL:
 https://github.com/HarshithaChettyRagava/BearcatCarPooling
 
-## User Guide:
+# User Guide:
 
 ###Login Page:
+
 ###Sign Up Page:
 
 
