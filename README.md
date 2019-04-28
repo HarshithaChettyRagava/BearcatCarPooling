@@ -11,9 +11,9 @@ https://github.com/HarshithaChettyRagava/BearcatCarPooling
 
 # User Guide:
 
-##Login Page:
+## Login Page:
 
-##Sign Up Page:
+## Sign Up Page:
 
 
 - User should signup for the app by entering their details by clicking signup button.
