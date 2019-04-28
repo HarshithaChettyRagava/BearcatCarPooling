@@ -9,17 +9,23 @@ Bearcat Car Pooling
 ## GitHub repo URL:
 https://github.com/HarshithaChettyRagava/BearcatCarPooling
 
+## Back4app Parse database URL and credentials:
+http://back4app.com
+- Username : harshitha.chettyragava@gmail.com
+- Password: Back4app@12
+- App name in the Dashboard - BearcatCarPooling
 
 ## App Credentials to directly signIn 
 - Username : Saisri@gmail.com
 - Password : Saihoney@22
 
-## Pre requisites to display Google maps on your emulator
+## Pre requisites to display Google maps on the emulator
 - Install google play services, google repository from the SDK manager
 - You have to use the android emulator of API version 24 or more(Nougat or more)
 - You have to update your google play services on the emulator.
+- You should login with your gmail account to update google play services on the emulator
 - You should have API key present in google_maps_api.xml in resources/values
-- The above xml file we will sending an email to the corresponding person due to security reasons. (can not place in gitHub since it will accessible publicly)
+- The above xml file we sent via an email to the GA due to security reasons and also will be submitted along with the zip file in the submission(can not place in gitHub since it will be accessible publicly)
 
 ## User Guide:
 
@@ -33,12 +39,13 @@ https://github.com/HarshithaChettyRagava/BearcatCarPooling
 - New users are allowed to login by providing the basic information.
 - System validates the entries provided by the user.
 
-### Car Booking:
+### Map Page:
 
-- Once the user Login, a map would be displayed where he would be allowed to enter the destination location.
-- The current location will already be pointed on the map.
-- Select the destination location and click the tiney arrow button on the bottom left of the screen.
-- User will be navigated to the next page "Confirmation Page".
+- By default, Current location will be taken as the pick up location or source location.
+- User should enter destination in order to book a cab.
+- After entering destination user should press enter to find the location.
+- After clicking on the tiney forward arrow button which is on the bottom right of the screen, Source and destination locations will be send to confirmation activity for calculating the distance in miles.
+- Then the user will be navigated to the next page "Confirmation Page".
 
 ### Cofirmation/ Cost Estimation Page:
 
@@ -47,7 +54,6 @@ https://github.com/HarshithaChettyRagava/BearcatCarPooling
 - User should choose the number of seats he wish to book. This number should be less than or equal to the available seats.
 - The cost for required seats would be calculated and displayed for the user.
 - Now the user can make his dicision and confirm his booking. He can choose to cancel the ride.
-
 
 ### Reached Page:
 
@@ -62,7 +68,6 @@ https://github.com/HarshithaChettyRagava/BearcatCarPooling
 - If the user is happy with the ride, A simple Thank you message appears on the screen.
 - If the user gives any ratig less than 3, he would be redirected to another page.
 
-
 ### Aditional Feedback:
 
 - A detailed feedback page, where he will get to chhose more options to help improve his satisfaction.
@@ -73,7 +78,18 @@ https://github.com/HarshithaChettyRagava/BearcatCarPooling
 - We have tried to implement the concept leared in class and tried to explore more.
 - Layouts: Grid layout, Linear Layout, Relative Layout.
 - Intent
-- Parse Database.
-- Alert Boxes.
-- Action Bar.
+- Parse Database
+- Fragment
+- Alert Boxes
+- Action Bar
 - Google Maps- Not taught in class
+
+## List of functionalities from the app proposal:
+- User login page - Sign Up and Sign In - Completed
+- Database to store user data - Completed
+- Validating data to ensure no multiple Sign-Ups for same email or mobile number - Completed
+- Getting GPS location and matching user locations using Google APK’s with the help of coordinates - Completed
+- An activity of getting ride confirmation and payment method - Completed.
+- Creation of hamburger menu option for home, user profile, logout, etc.,. - 70% Completed with the overflow menu containing ContactUs and logout functionalities. 
+- If possible will add a mile range of 10, 20, 30 - Not yet completed.
+- Feedback from riders - Completed
