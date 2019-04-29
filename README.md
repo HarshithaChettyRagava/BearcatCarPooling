@@ -93,3 +93,6 @@ http://back4app.com
 - Creation of hamburger menu option for home, user profile, logout, etc.,. - 70% Completed with the overflow menu containing ContactUs and logout functionalities. 
 - If possible will add a mile range of 10, 20, 30 - Not yet completed.
 - Feedback from riders - Completed
+
+## .apk file in the following path and also uploading in the submission:
+- BearcatCarPooling\app\build\outputs\apk\debug
